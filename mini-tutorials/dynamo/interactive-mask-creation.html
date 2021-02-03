@@ -56,9 +56,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Literature" href="../../resources/literature/index.html" />
+    <link rel="next" title="Python" href="../../computing/python/index.html" />
     <link rel="prev" title="dtmslice viewing controls" href="dtmslice-controls.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -292,6 +293,90 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Interactive mask creation
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  computing
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/python/index.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/getting-started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/virtual-environments.html">
+     Virtual environments
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../computing/python/useful-packages/useful-packages.html">
+     Useful packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/dynamotable.html">
+       dynamotable
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/emfile.html">
+       emfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/eulerangles.html">
+       eulerangles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/mrcfile.html">
+       mrcfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/napari.html">
+       napari
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/starfile.html">
+       starfile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/matlab/index.html">
+   MATLAB
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/matlab/add-to-path.html">
+     Adding scripts/functions to your PATH in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MATLAB
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -654,32 +739,32 @@ In this mini-tutorial, we will use a legacy version of the <code class="docutils
 <h2>Getting comfortable with the viewer<a class="headerlink" href="#getting-comfortable-with-the-viewer" title="Permalink to this headline">¶</a></h2>
 <p>Here we go over some of the controls available in this viewer, you might have noticed there are a lot!</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c84c6b54-876c-4ef8-a72e-fa2cedfbee04" name="1d1affb8-8c57-4dc2-a8a7-1b8de3a21d4a" type="radio">
-</input><label class="tabbed-label" for="c84c6b54-876c-4ef8-a72e-fa2cedfbee04">
+<input checked="checked" id="58129ce5-0631-4064-86db-db102b774fad" name="3621330e-1487-47af-84e6-f152d864fe6a" type="radio">
+</input><label class="tabbed-label" for="58129ce5-0631-4064-86db-db102b774fad">
 x/y/z view</label><div class="tabbed-content docutils">
 <p>You can switch between viewing x-, y- or z-slices with the <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> buttons.</p>
 <p><img alt="xyz switching image" src="../../_images/xyz.gif" /></p>
 </div>
-<input id="a2c39e72-d0f4-4f54-916a-77a999ee6669" name="1d1affb8-8c57-4dc2-a8a7-1b8de3a21d4a" type="radio">
-</input><label class="tabbed-label" for="a2c39e72-d0f4-4f54-916a-77a999ee6669">
+<input id="6756aeff-d258-453f-8ee6-19e830f94691" name="3621330e-1487-47af-84e6-f152d864fe6a" type="radio">
+</input><label class="tabbed-label" for="6756aeff-d258-453f-8ee6-19e830f94691">
 slice mode</label><div class="tabbed-content docutils">
 <p>You can switch between viewing either a single projection or a set of slices</p>
 <p><img alt="singleproj image" src="../../_images/singleproj.gif" /></p>
 </div>
-<input id="2995fef7-6155-4568-8cd7-8f88ce3c6a98" name="1d1affb8-8c57-4dc2-a8a7-1b8de3a21d4a" type="radio">
-</input><label class="tabbed-label" for="2995fef7-6155-4568-8cd7-8f88ce3c6a98">
+<input id="65856b42-7422-4a35-80fc-c52be32e186a" name="3621330e-1487-47af-84e6-f152d864fe6a" type="radio">
+</input><label class="tabbed-label" for="65856b42-7422-4a35-80fc-c52be32e186a">
 Fourier filters</label><div class="tabbed-content docutils">
 <p>Bandpass filters can be applied from the GUI by setting the <code class="docutils literal notranslate"><span class="pre">band</span></code> parameters then hitting the <code class="docutils literal notranslate"><span class="pre">band</span></code> button. The filter frequencies are set in Fourier pixels.</p>
 <p><img alt="bandpass image" src="../../_images/bandpass.gif" /></p>
 </div>
-<input id="8a90ae6a-51a6-4a59-bd4e-397692276939" name="1d1affb8-8c57-4dc2-a8a7-1b8de3a21d4a" type="radio">
-</input><label class="tabbed-label" for="8a90ae6a-51a6-4a59-bd4e-397692276939">
+<input id="11297af2-92bd-4d73-8667-be222de99656" name="3621330e-1487-47af-84e6-f152d864fe6a" type="radio">
+</input><label class="tabbed-label" for="11297af2-92bd-4d73-8667-be222de99656">
 symmetry</label><div class="tabbed-content docutils">
 <p>Symmetry can be applied from the GUI. Symmetry is applied along the z-axis of the volume.</p>
 <p><img alt="symmetry image" src="../../_images/sym.gif" /></p>
 </div>
-<input id="79acbcaf-2f43-4c71-b504-c61ff3be95dc" name="1d1affb8-8c57-4dc2-a8a7-1b8de3a21d4a" type="radio">
-</input><label class="tabbed-label" for="79acbcaf-2f43-4c71-b504-c61ff3be95dc">
+<input id="a9f27371-2af1-42ea-a37c-092794826e78" name="3621330e-1487-47af-84e6-f152d864fe6a" type="radio">
+</input><label class="tabbed-label" for="a9f27371-2af1-42ea-a37c-092794826e78">
 reset</label><div class="tabbed-content docutils">
 <p>The volume visualised can be reset to its original state at any time with the <code class="docutils literal notranslate"><span class="pre">reset</span></code> button.</p>
 <p><img alt="reset button image" src="../../_images/reset.gif" /></p>
@@ -690,8 +775,8 @@ reset</label><div class="tabbed-content docutils">
 <h2>Mask creation<a class="headerlink" href="#mask-creation" title="Permalink to this headline">¶</a></h2>
 <p>This section covers the basics of mask creation in <code class="docutils literal notranslate"><span class="pre">dpkdev.legacy.dynamo_mapview()</span></code></p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="50772a5d-7090-4e03-adf2-a63b160e1aae" name="5728e3b6-cf85-4d05-8ff1-17800c968751" type="radio">
-</input><label class="tabbed-label" for="50772a5d-7090-4e03-adf2-a63b160e1aae">
+<input checked="checked" id="6a00fd23-53c0-4997-a965-ecbd826c1b1b" name="7cd4019a-7b16-464a-9bb0-7966856d6e58" type="radio">
+</input><label class="tabbed-label" for="6a00fd23-53c0-4997-a965-ecbd826c1b1b">
 mask creation</label><div class="tabbed-content docutils">
 <p>You can create a shaped mask by</p>
 <ul class="simple">
@@ -702,14 +787,14 @@ mask creation</label><div class="tabbed-content docutils">
 <p>hit the <code class="docutils literal notranslate"><span class="pre">layer</span></code> button to bring up a visualisation of the mask on the currently depicted slices.
 <img alt="interactive mask creation image" src="../../_images/masking.gif" /></p>
 </div>
-<input id="1c3357b8-ff9b-4400-bc89-9630e9da32b9" name="5728e3b6-cf85-4d05-8ff1-17800c968751" type="radio">
-</input><label class="tabbed-label" for="1c3357b8-ff9b-4400-bc89-9630e9da32b9">
+<input id="6b894433-b2e3-42a8-b09e-aee8eeca373c" name="7cd4019a-7b16-464a-9bb0-7966856d6e58" type="radio">
+</input><label class="tabbed-label" for="6b894433-b2e3-42a8-b09e-aee8eeca373c">
 saving a mask</label><div class="tabbed-content docutils">
 <p>You can save a mask by setting a filename in the <code class="docutils literal notranslate"><span class="pre">Mask</span></code> section and hitting <code class="docutils literal notranslate"><span class="pre">save</span></code>
 <img alt="save mask image" src="../../_images/savemask.gif" /></p>
 </div>
-<input id="eba7509b-4f91-4b65-9b10-0fdfe8d3d81c" name="5728e3b6-cf85-4d05-8ff1-17800c968751" type="radio">
-</input><label class="tabbed-label" for="eba7509b-4f91-4b65-9b10-0fdfe8d3d81c">
+<input id="fb14fc40-2b38-4db1-b2e4-285be7b76d56" name="7cd4019a-7b16-464a-9bb0-7966856d6e58" type="radio">
+</input><label class="tabbed-label" for="fb14fc40-2b38-4db1-b2e4-285be7b76d56">
 saving a masked volume</label><div class="tabbed-content docutils">
 <p>You can apply a mask onto a volume and save the volume in the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">I/O</span></code> section
 <img alt="" src="../../_images/save_masked_vol.gif" /></p>
@@ -747,7 +832,7 @@ saving a masked volume</label><div class="tabbed-content docutils">
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="dtmslice-controls.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">dtmslice</span></code> viewing controls</a>
-    <a class='right-next' id="next-link" href="../../resources/literature/index.html" title="next page">Literature</a>
+    <a class='right-next' id="next-link" href="../../computing/python/index.html" title="next page">Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

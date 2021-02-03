@@ -56,6 +56,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Multi-particle refinement" href="m.html" />
@@ -292,6 +293,90 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../mini-tutorials/dynamo/interactive-mask-creation.html">
      Interactive mask creation
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  computing
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/python/index.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/getting-started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/virtual-environments.html">
+     Virtual environments
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../computing/python/useful-packages/useful-packages.html">
+     Useful packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/dynamotable.html">
+       dynamotable
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/emfile.html">
+       emfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/eulerangles.html">
+       eulerangles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/mrcfile.html">
+       mrcfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/napari.html">
+       napari
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/starfile.html">
+       starfile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/matlab/index.html">
+   MATLAB
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/matlab/add-to-path.html">
+     Adding scripts/functions to your PATH in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MATLAB
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -719,8 +804,8 @@ package. The script takes a <code class="docutils literal notranslate"><span cla
 <p>We reconstruct at a box twice as large as before because we have halved the pixel spacing.</p>
 </div>
 </div>
-<p><img alt="reconstruct subtomograms" src="../../_images/subtomo-reconstruction.png" /></p>
-<p>When ready, click on <code class="docutils literal notranslate"><span class="pre">EXPORT</span></code>. To prepare the directory structure for relion, we will choose to put the output <code class="docutils literal notranslate"><span class="pre">.star</span></code> file inside a new <code class="docutils literal notranslate"><span class="pre">root/relion</span></code> folder and call it <code class="docutils literal notranslate"><span class="pre">subtomograms_5Apx.star</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/subtomo-reconstruction.png"><img alt="../../_images/subtomo-reconstruction.png" src="../../_images/subtomo-reconstruction.png" style="width: 300px;" /></a>
+<p>When ready, click on <code class="docutils literal notranslate"><span class="pre">EXPORT</span></code>. To prepare the directory structure for relion, we will choose to put the output <code class="docutils literal notranslate"><span class="pre">.star</span></code> file inside a new <code class="docutils literal notranslate"><span class="pre">relion</span></code> folder in the project root directory, and call it <code class="docutils literal notranslate"><span class="pre">subtomograms_5Apx.star</span></code>.</p>
 </div>
 </div>
 <div class="section" id="d-auto-refine-in-relion">
@@ -770,46 +855,46 @@ tail subtomograms_5Apx.star -n +31 <span class="p">|</span> shuf -n <span class=
 <div class="card w-100 border-2 docutils">
 <div class="card-body docutils">
 <div class="tabbed-set docutils">
-<input checked="checked" id="a78438f6-1b3b-45af-adea-5c37e2c50866" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="a78438f6-1b3b-45af-adea-5c37e2c50866">
+<input checked="checked" id="e9fe7951-2f0f-4aee-9dc5-e8357f082d61" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="e9fe7951-2f0f-4aee-9dc5-e8357f082d61">
 I/O</label><div class="tabbed-content docutils">
 <p class="card-text">We will refine without a mask for now as this refinement serves only to make sure that the particles remain well centered and we expect to go significantly beyond 10Å.</p>
 <p class="card-text"><img alt="relion 1" src="../../_images/relion-1.png" /></p>
 </div>
-<input id="29601c2b-acee-4f9d-bda3-64ae072e4453" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="29601c2b-acee-4f9d-bda3-64ae072e4453">
+<input id="accd81a3-03e8-4856-aa50-2dd477457f45" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="accd81a3-03e8-4856-aa50-2dd477457f45">
 Reference</label><div class="tabbed-content docutils">
 <p class="card-text">We use a conservative initial lowpass of 30Å to avoid overfitting, and C6 symmetry based on our understanding of the lattice from the inital model generation.</p>
 <p class="card-text"><img alt="relion 2" src="../../_images/relion-2.png" /></p>
 </div>
-<input id="283c8756-f29c-4d81-8501-ad2e59882989" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="283c8756-f29c-4d81-8501-ad2e59882989">
+<input id="507093da-b307-4928-acd4-7f04f635bd5e" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="507093da-b307-4928-acd4-7f04f635bd5e">
 CTF</label><div class="tabbed-content docutils">
 <p class="card-text"><img alt="relion 3" src="../../_images/relion-3.png" /></p>
 </div>
-<input id="aecc50b0-6cd7-486e-86c3-c8c3af0102b6" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="aecc50b0-6cd7-486e-86c3-c8c3af0102b6">
+<input id="13452019-8390-4d4d-b38e-ee48433b600e" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="13452019-8390-4d4d-b38e-ee48433b600e">
 Optimisation</label><div class="tabbed-content docutils">
 <p class="card-text">We use a particle diameter covering the whole box to continue making use of the signal from neighbouring hexamers to drive alignment. We will change this once we start aiming for more optimal refinements focussed on the central hexamer.</p>
 <p class="card-text"><img alt="relion 4" src="../../_images/relion-4.png" /></p>
 </div>
-<input id="fbe15577-f030-4791-9314-08660d5265ab" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="fbe15577-f030-4791-9314-08660d5265ab">
+<input id="7fd14b70-4f0d-49c6-9353-f918a8505788" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="7fd14b70-4f0d-49c6-9353-f918a8505788">
 Auto-sampling</label><div class="tabbed-content docutils">
 <p class="card-text"><img alt="relion 5" src="../../_images/relion-5.png" /></p>
 </div>
-<input id="f15b16e0-169f-4fa0-b5de-744794e0d2bc" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="f15b16e0-169f-4fa0-b5de-744794e0d2bc">
+<input id="8124c9ef-5b1e-4da7-b7c0-82c9332ec347" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="8124c9ef-5b1e-4da7-b7c0-82c9332ec347">
 Helix</label><div class="tabbed-content docutils">
 <p class="card-text">Leave this disabled, we are not performing helical refinement in this case.</p>
 </div>
-<input id="2316a6de-ed44-4fc0-b91a-b10c9d2264dc" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="2316a6de-ed44-4fc0-b91a-b10c9d2264dc">
+<input id="2cec22e0-1622-4590-a04d-98409c7a7f1f" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="2cec22e0-1622-4590-a04d-98409c7a7f1f">
 Compute</label><div class="tabbed-content docutils">
 <p class="card-text"><img alt="relion 6" src="../../_images/relion-6.png" /></p>
 </div>
-<input id="9fb59697-3772-49f8-b187-6c93b85d19f7" name="64afab00-a74c-4460-a0ae-a59ee9b4420a" type="radio">
-</input><label class="tabbed-label" for="9fb59697-3772-49f8-b187-6c93b85d19f7">
+<input id="d68a973f-9020-43b6-8558-770f833f18b1" name="bab0536a-a7bd-48ab-9db8-7cdc57350385" type="radio">
+</input><label class="tabbed-label" for="d68a973f-9020-43b6-8558-770f833f18b1">
 Running</label><div class="tabbed-content docutils">
 <p class="card-text">The specific computational parameters will depend upon the configuration of your computing resources. Here, we are running on a cluster node with:</p>
 <ul class="simple">
@@ -855,7 +940,7 @@ See <a class="reference external" href="https://blake.bcm.edu/emanwiki/EMAN2/Box
 We can use a fairly small box here because Warp implements an aliasing-free reconstruction algorithm to avoid this.</p>
 </div>
 <p>Save the file in the <code class="docutils literal notranslate"><span class="pre">relion</span></code> directory as <code class="docutils literal notranslate"><span class="pre">subtomograms_1.6Apx.star</span></code></p>
-<p><img alt="reconstruct subtomograms 1.6 image" src="../../_images/subtomo-extraction-1-6.png" /></p>
+<a class="reference internal image-reference" href="../../_images/subtomo-extraction-1-6.png"><img alt="../../_images/subtomo-extraction-1-6.png" src="../../_images/subtomo-extraction-1-6.png" style="width: 300px;" /></a>
 <p>Generate a reconstruction at 1.6Å/px using <code class="docutils literal notranslate"><span class="pre">relion_reconstruct</span></code> with the following command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>relion_reconstruct --i subtomograms_1.6Apx.star --o reconstruction_1.6Apx.mrc --3d_rot --ctf --sym C6
 </pre></div>

@@ -56,6 +56,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Particle pose optimisation" href="relion.html" />
@@ -292,6 +293,90 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../mini-tutorials/dynamo/interactive-mask-creation.html">
      Interactive mask creation
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  computing
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/python/index.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/getting-started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/python/virtual-environments.html">
+     Virtual environments
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../computing/python/useful-packages/useful-packages.html">
+     Useful packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/dynamotable.html">
+       dynamotable
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/emfile.html">
+       emfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/eulerangles.html">
+       eulerangles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/mrcfile.html">
+       mrcfile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/napari.html">
+       napari
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing/python/useful-packages/starfile.html">
+       starfile
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../computing/matlab/index.html">
+   MATLAB
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing/matlab/add-to-path.html">
+     Adding scripts/functions to your PATH in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MATLAB
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -663,6 +748,7 @@
 <li><p>We should adjust the shifts so that particles can only move half of the lattice spacing in the x and y direction. We expect to find a lattice of particles with roughly 7.5 nm spacing. If we allow each particle to shift a maximum of 4nm in each direction it should be guaranteed to find the closest true position in the lattice, without moving too far. This maximises the chances of finding all lattice positions from the beginning.</p></li>
 <li><p>We should allow the particles to shift more in z than in x and y to account for any errors when defining our <code class="docutils literal notranslate"><span class="pre">Vesicle</span></code> models.</p></li>
 </ul>
+<a class="reference internal image-reference" href="../../_images/numerical-params2.png"><img alt="../../_images/numerical-params2.png" src="../../_images/numerical-params2.png" style="width: 500px;" /></a>
 <p>Once the parameters are all set, run the project from the command line as before. This will take significantly longer that the previous time!</p>
 </div>
 <div class="section" id="cleaning-the-dataset-based-on-geometrical-constraints">
@@ -674,19 +760,68 @@
 <p>The provided scripts are just a few lines long, and are given for convenience and illustration purposes. You are encouraged to read them and modify them for your own purposes.</p>
 </div>
 </div>
-<p>To isolate a good subset of particles in lattices we will use three short scripts provided with this tutorial.</p>
-<p>The first cleaning step we should take is removing duplicate particles. To do so, we will use a simple matlab script, <a class="reference external" href="https://github.com/teamtomo/teamtomo.github.io/tree/master/walkthroughs/EMPIAR-10164/scripts/remove_duplicates.m"><code class="docutils literal notranslate"><span class="pre">remove_duplicates.m</span></code></a>.</p>
+<p>We can now take a look at the resulting particle positions, written in the output file <code class="docutils literal notranslate"><span class="pre">dynamo/findparticles/results/ite_0001/refined_table_ref_001_ite_0001.tbl</span></code>.</p>
+<p>We can use <a class="reference external" href="https://github.com/teamtomo/teamtomo.github.io/tree/master/walkthroughs/EMPIAR-10164/scripts/view_particles.m"><code class="docutils literal notranslate"><span class="pre">view_particles.m</span></code></a>  to open a 3D viewer and examine them. Open matlab in <code class="docutils literal notranslate"><span class="pre">dynamo/findparticles/results/ite_0001/</span></code> and run:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e66201ed-1b65-4dfe-9925-fef0a82e3e06" name="7738bc41-61ca-410f-b5f6-36483208cb19" type="radio">
+</input><label class="tabbed-label" for="e66201ed-1b65-4dfe-9925-fef0a82e3e06">
+Command</label><div class="tabbed-content docutils">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">view_particles</span><span class="p">(</span><span class="s">&#39;refined_table_ref_001_ite_0001.tbl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="c992e471-d7a3-47e9-aa75-6c51cd48c639" name="7738bc41-61ca-410f-b5f6-36483208cb19" type="radio">
+</input><label class="tabbed-label" for="c992e471-d7a3-47e9-aa75-6c51cd48c639">
+Source code</label><div class="tabbed-content docutils">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>gui<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">view_particles</span><span class="p">(</span>table<span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="c">% read the table</span>
+    <span class="n">table</span> <span class="p">=</span> <span class="n">dread</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+    <span class="c">% get unique keys of each volume</span>
+    <span class="n">keys</span> <span class="p">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">table</span><span class="p">(:,</span> <span class="mi">20</span><span class="p">));</span>
+
+    <span class="c">% open the viewer gui</span>
+    <span class="n">gui</span> <span class="p">=</span> <span class="n">mbgraph</span><span class="p">.</span><span class="n">montage</span><span class="p">();</span>
+
+    <span class="c">% loop through volume keys</span>
+    <span class="n">for</span> <span class="s">key_idx</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+        <span class="n">key</span> <span class="p">=</span> <span class="n">keys</span><span class="p">(</span><span class="n">key_idx</span><span class="p">);</span>
+        <span class="c">% extract the table corresponding to this volume</span>
+        <span class="n">idx</span> <span class="p">=</span> <span class="n">table</span><span class="p">(:,</span> <span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="n">key_idx</span><span class="p">;</span>
+        <span class="n">subtable</span> <span class="p">=</span> <span class="n">table</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="p">:);</span>
+        <span class="c">% draw the particles as points and lines</span>
+        <span class="n">ax</span> <span class="p">=</span> <span class="n">gui</span><span class="p">.</span><span class="n">gca</span><span class="p">;</span>
+        <span class="n">sketch</span> <span class="p">=</span> <span class="n">dpktbl</span><span class="p">.</span><span class="n">plots</span><span class="p">.</span><span class="n">sketch</span><span class="p">(</span><span class="n">subtable</span><span class="p">,</span> <span class="s">&#39;haxis&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="p">);</span>
+        <span class="c">% create a new frame for the next volume</span>
+        <span class="n">if</span> <span class="s">key_idx~=size(keys,</span> <span class="s">1)</span>
+            <span class="n">gui</span><span class="p">.</span><span class="n">step</span><span class="p">;</span>
+        <span class="n">end</span>
+    <span class="s">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can pan around the view by drag-n-dropping, zoom by scrolling, and change volume by clicking the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> buttons.</p>
+</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/particle-positions.png"><img alt="../../_images/particle-positions.png" src="../../_images/particle-positions.png" style="width: 600px;" /></a>
+<p>As you can see, there are regions where particle positions appear to form regular lattices, and other smaller, more irregular regions. These disordered patches are likely due to irregularities in the VLP we annotated. To avoid including particles which do not contain our lattice structure, we should try to remove these particles at this stage.</p>
+<p>However, the first cleaning step we should take is removing duplicate particles (remember, we oversampled the surface compared to the expected particle density!). To do so, we will use a simple matlab script, <a class="reference external" href="https://github.com/teamtomo/teamtomo.github.io/tree/master/walkthroughs/EMPIAR-10164/scripts/remove_duplicates.m"><code class="docutils literal notranslate"><span class="pre">remove_duplicates.m</span></code></a>.</p>
 <p>To run, simply open MATLAB in <code class="docutils literal notranslate"><span class="pre">dynamo/findparticles/results/ite_0001/averages</span></code> and run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="44cf281c-a8d7-495c-8985-cc1bcd20b32a" name="bca8276c-0aac-4c3b-b55b-011aafbf5c64" type="radio">
-</input><label class="tabbed-label" for="44cf281c-a8d7-495c-8985-cc1bcd20b32a">
+<input checked="checked" id="c1125bd3-6b13-46a3-a0be-b19b13ea1cd9" name="46b6dee6-82c5-438c-8dff-ed59644f9493" type="radio">
+</input><label class="tabbed-label" for="c1125bd3-6b13-46a3-a0be-b19b13ea1cd9">
 Command</label><div class="tabbed-content docutils">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">remove_duplicates</span>
 </pre></div>
 </div>
 </div>
-<input id="fe5f8d3b-f3e3-45ae-9d88-9ea75ef5a7b2" name="bca8276c-0aac-4c3b-b55b-011aafbf5c64" type="radio">
-</input><label class="tabbed-label" for="fe5f8d3b-f3e3-45ae-9d88-9ea75ef5a7b2">
+<input id="2d569c4e-38bb-4ef5-bcfd-c4fcf66212aa" name="46b6dee6-82c5-438c-8dff-ed59644f9493" type="radio">
+</input><label class="tabbed-label" for="2d569c4e-38bb-4ef5-bcfd-c4fcf66212aa">
 Source code</label><div class="tabbed-content docutils">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% read table</span>
 <span class="n">table</span> <span class="p">=</span> <span class="n">dread</span><span class="p">(</span><span class="s">&#39;refined_table_ref_001_ite_0001.tbl&#39;</span><span class="p">);</span>
@@ -705,15 +840,15 @@ Source code</label><div class="tabbed-content docutils">
 <p>The next step is to remove particles that don’t belong to the lattice. To do so, we use <a class="reference external" href="https://github.com/teamtomo/teamtomo.github.io/tree/master/walkthroughs/EMPIAR-10164/scripts/check_radial_distribution.m"><code class="docutils literal notranslate"><span class="pre">check_radial_distribution.m</span></code></a>.</p>
 <p>Once again, in the same directory, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d7ff335e-7000-4807-a94f-a66327040b1a" name="691e4cf5-b6e2-43f6-94a5-5b9efedafd72" type="radio">
-</input><label class="tabbed-label" for="d7ff335e-7000-4807-a94f-a66327040b1a">
+<input checked="checked" id="d10c7179-4fdf-4044-b5ee-2c80971a126a" name="abe92a20-f420-42d7-ab4a-f7e76a0dbb8c" type="radio">
+</input><label class="tabbed-label" for="d10c7179-4fdf-4044-b5ee-2c80971a126a">
 Command</label><div class="tabbed-content docutils">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">check_radial_distribution</span>
 </pre></div>
 </div>
 </div>
-<input id="c2f53e26-cbd2-4570-85b9-148383bf950d" name="691e4cf5-b6e2-43f6-94a5-5b9efedafd72" type="radio">
-</input><label class="tabbed-label" for="c2f53e26-cbd2-4570-85b9-148383bf950d">
+<input id="7125715f-7b3a-44e1-b927-2fcb3cd343d4" name="abe92a20-f420-42d7-ab4a-f7e76a0dbb8c" type="radio">
+</input><label class="tabbed-label" for="7125715f-7b3a-44e1-b927-2fcb3cd343d4">
 Source code</label><div class="tabbed-content docutils">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% check number of neighbours in radial shells, 1 px thick shells</span>
 
@@ -751,15 +886,15 @@ Source code</label><div class="tabbed-content docutils">
 <p><img alt="radial distribution" src="../../_images/radial-distance-profile.png" /></p>
 <p>This confirms the previously measured interparticle distance and the fact that most particles slid into ordered positions in the lattice. We can use the first peak to select against particles that don’t conform to this distribution. The next script, <a class="reference external" href="https://github.com/teamtomo/teamtomo.github.io/tree/master/walkthroughs/EMPIAR-10164/scripts/subset_table_based_on_neighbours.m"><code class="docutils literal notranslate"><span class="pre">subset_table_based_on_neighbours.m</span></code></a>, removes all particles that don’t have at least 3 neighbours in the radial shell at distance 7.5 px. To use it, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8b6d47ed-65f4-4f3d-b984-c9128327bca7" name="487883d2-e819-408f-83dc-da33a8cb1a6a" type="radio">
-</input><label class="tabbed-label" for="8b6d47ed-65f4-4f3d-b984-c9128327bca7">
+<input checked="checked" id="63ec5d33-5e35-4129-beb9-20e25e8b23ed" name="2001dd67-5694-4209-a910-13d7d0014ddf" type="radio">
+</input><label class="tabbed-label" for="63ec5d33-5e35-4129-beb9-20e25e8b23ed">
 Command</label><div class="tabbed-content docutils">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">subset_table_based_on_neighbours</span>
 </pre></div>
 </div>
 </div>
-<input id="f0966122-20ca-4aa1-be50-2a3e20d325b7" name="487883d2-e819-408f-83dc-da33a8cb1a6a" type="radio">
-</input><label class="tabbed-label" for="f0966122-20ca-4aa1-be50-2a3e20d325b7">
+<input id="be2cc23e-b783-4f1f-9320-e5831cf62df2" name="2001dd67-5694-4209-a910-13d7d0014ddf" type="radio">
+</input><label class="tabbed-label" for="be2cc23e-b783-4f1f-9320-e5831cf62df2">
 Source code</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">read</span> <span class="n">table</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">dread</span><span class="p">(</span><span class="s1">&#39;result_10Apx_nodup.tbl&#39;</span><span class="p">);</span>
